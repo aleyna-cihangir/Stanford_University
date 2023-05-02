@@ -6,6 +6,7 @@ def main():
             hospital()
         if front_is_clear():
             move()
+            
 # create a hospital model            
 def hospital():
     pick_beeper()
@@ -35,7 +36,6 @@ def three_put_beep():
 def small_beeper():
         put_beeper()
     
-    
 def turn_right():
     for i in range(3):
         turn_left()
@@ -47,8 +47,6 @@ def turn_around():
 def to_wall():
     while front_is_clear():
         move()
-
-
 
 if __name__ == '__main__':
     main()
