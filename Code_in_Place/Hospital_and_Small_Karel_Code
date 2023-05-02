@@ -1,0 +1,54 @@
+from karel.stanfordkarel import *
+
+def main():
+    while front_is_clear():
+        if beepers_present():
+            hospital()
+        if front_is_clear():
+            move()
+# create a hospital model            
+def hospital():
+    pick_beeper()
+    build_host()
+    turn_left()
+    move()
+    build_host()
+    turn_left()
+    
+# structure of hospital model 
+def build_host():
+    turn_left()
+    three_put_beep()
+    turn_around()
+    to_wall()
+    
+# adding 3 beepers for hospital and small  
+def three_put_beep():
+    for i in range(3):
+        if front_is_blocked():
+            small_beeper()
+        else :
+            put_beeper()
+            move()
+            
+# small code structure             
+def small_beeper():
+        put_beeper()
+    
+    
+def turn_right():
+    for i in range(3):
+        turn_left()
+
+def turn_around():
+    for i in range(2):
+        turn_left()
+
+def to_wall():
+    while front_is_clear():
+        move()
+
+
+
+if __name__ == '__main__':
+    main()
