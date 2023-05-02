@@ -1,0 +1,20 @@
+from karel.stanfordkarel import *
+
+def main():
+    move()
+
+    for i in range(3):
+        
+        while beepers_present():
+            pick_ten_beepers()
+            if no_beepers_present():
+                move()
+        move()
+            
+def pick_ten_beepers():
+    for i in range(10):
+        pick_beeper()
+      
+
+if __name__ == '__main__':
+    main()
