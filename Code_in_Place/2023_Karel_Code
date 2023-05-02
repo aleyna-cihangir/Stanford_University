@@ -1,0 +1,19 @@
+from karel.stanfordkarel import *
+
+def main():
+    first_beeper()
+    move()
+    this_year()
+    move()
+
+def first_beeper():
+    for i in range(20):
+        put_beeper()
+    
+def this_year():
+    for i in range(23):
+        put_beeper()
+        
+
+if __name__ == '__main__':
+    main()
