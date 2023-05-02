@@ -7,7 +7,7 @@ def main():
         if front_is_clear():
             move()
             
-# create a hospital model            
+**# create a hospital model**       
 def hospital():
     pick_beeper()
     build_host()
