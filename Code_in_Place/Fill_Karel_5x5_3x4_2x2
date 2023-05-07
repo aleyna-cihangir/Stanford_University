@@ -1,0 +1,40 @@
+def main():
+    while left_is_clear():
+        fill_beeper()
+        next_row()
+    fill_beeper_row()       
+
+
+def fill_beeper_row():
+    while front_is_clear():
+        fill_beeper()
+
+
+def fill_beeper():
+    put_beeper()
+    while front_is_clear():
+        move()
+        put_beeper()
+
+         
+def next_row():
+    turn_around()
+    to_wall()
+    turn_right()
+    move()
+    turn_right() 
+
+
+def to_wall():
+    while front_is_clear():
+        move()
+   
+   
+def turn_around():
+    for i in range(2):
+        turn_left()
+
+
+def turn_right():
+    for i in range(3):
+        turn_left()
